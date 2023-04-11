@@ -12,8 +12,7 @@ Api para aplicação `To Do List`
     - CRUD básico utilizando o Base Repository com Insert, Get, Put (Update), e Delete
  - Documentação via Swagger
 
-### Para executar localmente
+### O que é necessário para executar localmente
 
 - Possuir o docker instalado
 - Executar `docker-compose -f docker-compose.yml up -d` na pasta backend
-
