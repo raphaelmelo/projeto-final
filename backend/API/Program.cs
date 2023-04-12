@@ -37,11 +37,16 @@ namespace TodoList
 
             builder.Services.AddDbContext<TarefaDbContext>(options =>
             {
-                options.UseNpgsql(builder.Configuration.GetConnectionString("Docker"),
+                options.UseNpgsql(builder.Configuration.GetConnectionString("Render"),
                     m => m.MigrationsAssembly("TodoList"));
             });
 
             builder.Services.AddScoped<IRepositorio, Repositorio>();
+
+            builder.Services.AddCors(policyBuilder =>
+                    policyBuilder.AddDefaultPolicy(policy =>
+                    policy.WithOrigins("*").AllowAnyHeader().AllowAnyHeader())
+                );
 
             var app = builder.Build();
 
@@ -57,6 +62,8 @@ namespace TodoList
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseCors(options => options.AllowAnyOrigin());
 
             app.UseHttpsRedirection();
 
