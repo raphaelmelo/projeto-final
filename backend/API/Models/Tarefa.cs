@@ -4,7 +4,6 @@ namespace TodoList.Models
 {
     public class Tarefa
     {
-        [Key]
         public int Id { get; set; }
         [Required]
         public string? Titulo { get; set; }
