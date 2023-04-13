@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.main {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  background: rgba(87, 239, 230, 0.79);
+  font-family: 'Montserrat';
+
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50%;
+  min-height: 30vh;
+}
+
+.title h1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 95.9%;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.span1 {
+  font-weight: 600;
+  font-size: 87px;
+  line-height: 83px;
+}
+
+.span2 {
+  font-weight: 400;
+  font-size: 37px;
+  line-height: 95.9%;
+
+
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+  }
+
+.CardWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: start;
+   min-width: 50%;
+  }
+
+
+.item {
+  width: 100vw;
+  min-width: 300px;
+  max-width: 600px;
+  height: 100%;
+  padding: 14px;
+
+  background: rgba(204, 224, 212, 0.87);
+  border: 6px solid rgba(27, 51, 50, 0.47);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: space-between;
+
+  
+}
+ 
+.line {
+  display: flex;
+  gap: 4px;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.59);
+  margin-bottom: 10px;
+}
+
+.rectangle {
+  padding-left: 1px;
+}
+
+.line2 {
+  display: flex;
+  gap: 2px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.59);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+ 
+
+}
+
+ .line2img {
+  display: flex;
+
+}
+
+ .line2img {
+  padding-top:2px;
+  width: 16px;
+  height: 16px;
+ 
+  }
+
+.actions {
+   display: flex;
+   justify-content: space-between;
+  align-items: end;
+  height: 100%;
+  gap: 2px;
+ }
+
+ .actions button{
+  border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+   }
+
+
+   .actions button img {
+  
+    padding: 0;
+    margin: 0;
+    }
