@@ -119,9 +119,10 @@
 
 .actions {
    display: flex;
+   flex-direction: column;
    justify-content: space-between;
   align-items: end;
-  height: 100%;
+  
   gap: 2px;
  }
 
@@ -155,7 +156,37 @@
 
 
    .actions button img {
-  
+    
+    width: 20px;
+    height: 20px;
     padding: 0;
     margin: 0;
     }
+
+    .form {
+      display: flex;
+      gap: 7px;
+    }
+
+    .input {
+      box-sizing: border-box;
+      width: 230px;
+      height: 24px;
+      background: rgba(204, 224, 212, 0.87);
+      border: 1px solid rgba(27, 51, 50, 0.47);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 6px;
+      color: rgba(0, 0, 0, 0.59);
+    }
+
+    .buttonForm {
+      box-sizing: border-box;
+      width: 102px;
+      height: 24px;
+      background: #9CACA3;
+      border: 1px solid rgba(27, 51, 50, 0.47);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+    }
+
