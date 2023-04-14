@@ -139,36 +139,46 @@ export default function Home() {
           </h1>
         </div>
           {showAdd && <div>
-          <form onSubmit={handleNewTodoSubmit}>
+          <form className={styles.form} onSubmit={handleNewTodoSubmit}>
             <input
               type="titulo"
               value={todo}
               onChange={(event) => setTodo(event.target.value)}
               required
+              className = {styles.input}
+              placeholder="Título da Tarefa"
             />
             <input
               type="descricao"
               value={todoDescription}
               onChange={(event) => setTodoDescription(event.target.value)}
               required
+              className = {styles.input}
+              placeholder="Descrição da Tarefa"
 
             />
-            <button type="submit">Novo</button>
+            <button type="submit" className={styles.buttonForm}>Novo</button>
           </form>
         </div>}
           {showEdit &&  <div>
-          <form onSubmit={handleEdit}>
+          <form className={styles.form}  onSubmit={handleEdit}>
             <input
               type="titulo"
               value={todo}
               onChange={(event) => setTodo(event.target.value)}
+              required
+              className = {styles.input}
+              placeholder="Título da Tarefa"
             />
             <input
               type="descricao"
               value={todoDescription}
               onChange={(event) => setTodoDescription(event.target.value)}
+              required
+              className = {styles.input}
+              placeholder="Descrição da Tarefa"
             />
-            <button type="submit">Editar</button>
+            <button type="submit" className={styles.buttonForm}>Editar</button>
           </form>
         </div>}
         <div className={styles.list}>
