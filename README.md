@@ -16,3 +16,11 @@ Api para aplicação `To Do List`
 
 - Possuir o docker instalado
 - Executar `docker-compose -f docker-compose.yml up -d` na pasta backend
+- Após executar o comando para subir o banco de dados via docer, alterar a connection string para "Docker" no arquivo Program.cs, linha 40.
+
+
+      builder.Services.AddDbContext<TarefaDbContext>(options =>
+      {
+          options.UseNpgsql(builder.Configuration.GetConnectionString("Docker"),
+              m => m.MigrationsAssembly("TodoList"));
+      });
