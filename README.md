@@ -2,7 +2,7 @@
 
 Api para aplicação `To Do List`
 
-### O que foi utilizado no backend?
+### O que foi utilizado no Backend?
  - Linguagem: C#
  - Asp.Net Core Web API versão 6.0
  - Conceito de inversão de controle com injeção de dependência do repositório da model e do contexto
@@ -12,11 +12,11 @@ Api para aplicação `To Do List`
     - CRUD básico utilizando o Base Repository com Insert, Get, Put (Update), e Delete
  - Documentação via Swagger
 
-### Para executar localmente
+### Para executar a api localmente
 
-- Possuir o docker instalado
+- Possuir o Docker instalado
 - Executar `docker-compose -f docker-compose.yml up -d` na pasta backend
-- Após executar o comando para subir o banco de dados via docer, alterar a connection string para "Docker" no arquivo Program.cs, linha 40.
+- Após executar o comando, para subir o banco de dados via docker, alterar a connection string para "Docker" no arquivo Program.cs, linha 40.
 
 
       builder.Services.AddDbContext<TarefaDbContext>(options =>
