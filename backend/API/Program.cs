@@ -44,9 +44,9 @@ namespace TodoList
             builder.Services.AddScoped<IRepositorio, Repositorio>();
 
             builder.Services.AddCors(policyBuilder =>
-                    policyBuilder.AddDefaultPolicy(policy =>
-                    policy.WithOrigins("*").AllowAnyHeader().AllowAnyHeader())
-                );
+                policyBuilder.AddDefaultPolicy(policy =>
+                policy.WithOrigins("*").AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin())
+            );
 
             var app = builder.Build();
 
@@ -63,7 +63,7 @@ namespace TodoList
                 app.UseSwaggerUI();
             }
 
-            app.UseCors(options => options.AllowAnyOrigin());
+            app.UseCors();
 
             app.UseHttpsRedirection();
 
